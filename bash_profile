@@ -5,3 +5,10 @@ export PATH=/usr/local/sbin:$PATH
   fi
   
 source ~/.bashrc
+
+tmux start-server
+if [[ -z "$TMUX" ]]
+then
+  exec tmux attach -t default
+fi
+
