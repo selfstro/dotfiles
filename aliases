@@ -4,7 +4,6 @@ alias ll='ls -lOFGh'
 function psg() { ps auxwww | grep "$@" | grep -v grep ;}
 alias sha1='openssl dgst -sha1'
 alias df='df -H'
-alias fplex='ssh -L 911-20110005622.local:32400:slink.local:32400 -N 127.0.0.1'
 alias sucasperon='sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate CatalogURL http://casper.int.neisd.net:8088/index.sucatalog'
 alias sucasperoff='sudo defaults delete /Library/Preferences/com.apple.SoftwareUpdate CatalogURL'
 alias grep='grep --color'
@@ -17,7 +16,7 @@ alias c='echo -ne "\033]0;$*\007";clear'
 alias lookup='dscacheutil -q host -a name '
 alias bigserver11='slogin selfstro@bigserver11'
 alias desktop='slogin neisd\\selfst@911ADM120003824'
-alias moof='slogin selfstro@moof.homeip.net'
+alias moof='slogin selfstro@moof.homeip.net -p443'
 alias moofl='slogin selfstro@moof.local'
 alias moofv='open vnc://selfstro@moof.local/'
 alias pash='mono ~/Developer/Pash/Source/PashConsole/bin/Debug/Pash.exe'
@@ -33,3 +32,6 @@ alias dirs='dirs -v'
 function keybase-getkey() { wget -qO - https://keybase.io/$argv/key.asc | gpg --import - ;}
 alias fixtitle='HOSTNAME=$(hostname)'
 function maketitle() { echo -n -e "\033]0;$1\007"; }
+function xmanpage() { open x-man-page://$@ ; }
+alias synergyoff='launchctl unload -w /Library/LaunchAgents/com.symless.synergy.synergy-service.plist'
+
