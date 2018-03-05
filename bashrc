@@ -1,6 +1,6 @@
 source ~/.aliases
-LESS="-eX"; export LESS
-MORE="-eX"; export MORE
+LESS="-eFRX"; export LESS
+MORE="-eFRX"; export MORE
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export MONO_GAC_PREFIX="/usr/local"
